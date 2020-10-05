@@ -22,13 +22,21 @@ module.exports = {
   async headers() {
     return [
       {
-        source: '/umami.js',
+        source: '/(script|umami).js',
         headers: [
           {
             key: 'Cache-Control',
             value: 'public, max-age=2592000', // 30 days
           },
         ],
+      },
+    ]
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/script.js',
+        destination: '/umami.js',
       },
     ]
   },
