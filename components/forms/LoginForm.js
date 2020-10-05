@@ -66,7 +66,7 @@ export default function LoginForm() {
         {() => (
           <Form>
             <Icon icon={<Logo />} size="xlarge" className={styles.icon} />
-            <h1 className="center">umami</h1>
+            <h1 className="center">Anila</h1>
             <FormRow>
               <label htmlFor="username">
                 <FormattedMessage id="label.username" defaultMessage="Username" />
