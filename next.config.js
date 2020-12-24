@@ -6,6 +6,7 @@ module.exports = {
     VERSION: pkg.version,
     FORCE_SSL: !!process.env.FORCE_SSL,
   },
+  basePath: process.env.BASE_PATH,
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
@@ -28,7 +29,7 @@ module.exports = {
           },
         ],
       },
-    ]
+    ];
   },
   async rewrites() {
     return [
